@@ -5,24 +5,21 @@ interface TechnologyListProps {
   technologies: Itechnology[];
   stack: Itechnology[];
   onAdd: (technology: Itechnology) => void;
-  onRemove: (id: number) => void;
 }
 
 const TechnologyList = ({
   technologies,
   stack,
   onAdd,
-  onRemove,
 }: TechnologyListProps) => {
   return (
-    <div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {technologies.map((technology) => (
         <TechnologyCard
           key={technology.id}
           technology={technology}
           isInStack={stack.some((item) => item.id === technology.id)}
           onAdd={onAdd}
-          onRemove={onRemove}
         />
       ))}
     </div>
