@@ -1,4 +1,5 @@
 import { use, useState } from "react";
+import { toast } from "react-toastify";
 import type { Itechnology } from "../Types/Tech";
 import TechnologyList from "./TechnologyList";
 import YourStack from "./YourStack";
@@ -12,20 +13,33 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
   const [stack, setStack] = useState<Itechnology[]>([]);
 
   const handleAdd = (technology: Itechnology) => {
-    const isAlreadyInStack = stack.some((item) => item.id === technology.id);
+    const isAlreadyInStack = stack.some(
+      (item) => item.id === technology.id
+    );
+
     if (isAlreadyInStack) {
-      alert(`${technology.name} is already in your stack!`);
+      toast.warning(`${technology.name} is already in your stack!`);
       return;
     }
+
     setStack([...stack, technology]);
+
+    toast.success(`${technology.name} added to your stack!`);
   };
 
   const handleRemove = (id: number) => {
+    const technology = stack.find((item) => item.id === id);
+
     setStack(stack.filter((technology) => technology.id !== id));
+
+    if (technology) {
+      toast.info(`${technology.name} removed from your stack!`);
+    }
   };
 
   const handleRemoveAll = () => {
     setStack([]);
+    toast.info("All technologies removed from your stack!");
   };
 
   return (
@@ -34,7 +48,8 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
         <h2 className="text-4xl font-bold text-slate-900">
           Explore the <span className="text-[#ec4899]">Technologies</span>
         </h2>
-        <p className="text-gray-500 mt-2">
+
+        <p className="mt-2 text-gray-500">
           Pick technologies to build your ideal stack.
         </p>
       </div>
