@@ -10,6 +10,7 @@ Vite — build tool and dev server
 Tailwind CSS + daisyUI — styling and UI components
 React-Toastify — alert/notification system
 JSON — local data source for all technology entries
+
 ✨ Features
 Interactive Stack Builder — browse 12 technologies across 7 categories, add or remove them from your personal stack, with duplicate-add prevention and a "Remove All" option.
 Shared Gradient Brand Theme — a single CSS variable (--gradient-brand) powers the brand name, hero heading highlight, and primary buttons, so the whole site's accent color can be re-themed by changing one value.
@@ -17,6 +18,7 @@ Shared Gradient Brand Theme — a single CSS variable (--gradient-brand) powers 
 🔗 Links
 Live Site:
 Repository: https://github.com/nurafsar657/Assignment-5
+
 Live link: https://rococo-kleicha-afc5f8.netlify.app/
 🧠 React Concepts 
 1. What is JSX, and why is it used in React?
