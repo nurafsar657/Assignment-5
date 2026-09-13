@@ -19,7 +19,7 @@ const TechnologyCard = ({
     >
       <div>
         <div className="flex justify-between items-start mb-4">
-          {/* Direct image logo render */}
+        
           {technology.image && (
             <img
               src={technology.image}
