@@ -17,6 +17,7 @@ Shared Gradient Brand Theme — a single CSS variable (--gradient-brand) powers 
 🔗 Links
 Live Site:
 Repository: https://github.com/nurafsar657/Assignment-5
+Live link: https://rococo-kleicha-afc5f8.netlify.app/
 🧠 React Concepts 
 1. What is JSX, and why is it used in React?
 JSX lets us write HTML-like code inside JavaScript.
